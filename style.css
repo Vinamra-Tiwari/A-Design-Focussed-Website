@@ -1,0 +1,217 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    overflow: hidden;
+}
+
+
+.main{
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    overflow: hidden;
+}
+
+.left{
+    width: 40%;
+    position: relative;
+    height: 100%;
+    background-color: whitesmoke
+    
+}
+
+.right{
+    width: 60%;
+    height: 100%;
+    background-color: cadetblue;
+    overflow: hidden;
+}
+
+.right-top{
+    height: 50%;
+    background-color: orchid;
+    display: flex;
+}
+
+.right-bottom{
+    height: 50%;
+    background-image: url(https://images.unsplash.com/photo-1567922045116-2a00fae2ed03?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-position: center;
+}
+
+.right-top-left{
+    width: 55%;
+    height: 100%;
+    background-image: url(https://images.unsplash.com/photo-1459411552884-841db9b3cc2a?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-size: cover;
+    background-position: bottom;
+
+}
+
+.right-top-right{
+    width: 45%;
+    height: 100%;
+    background-image: url(https://images.unsplash.com/photo-1586788224331-947f68671cf1?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-position: bottom;
+    background-size: cover ;
+
+}
+
+.right-top-left, 
+.right-top-right, 
+.right-bottom {
+    transform-origin: center; 
+    will-change: transform; 
+    transition-delay: 0.05s;
+}
+
+.navbar{
+    opacity: 0.9;
+    font-size: 20px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px 30px;
+    
+}
+
+.navbar-right{
+    margin-right: 100px;
+    display: flex;
+}
+
+.navbar-right p{
+    cursor: pointer;
+    margin-right: 30px;
+    color: #8c8c8c;
+    transition: all 0.3s ease;
+
+}
+
+.navbar-right p:hover{
+    color: black;
+    padding-bottom: 1px;
+    border-bottom: 2px solid black;
+    transform: scale(1.07);
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.1); 
+    font-weight: 500;
+
+    
+}
+
+.navbar-right i{
+    cursor: pointer;
+    margin-left: 5px;
+    color: royalblue;
+    transition: all 0.3s ease;
+}
+
+.navbar-right i:hover{
+    transform: scale(1.09);
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.1); 
+
+    
+}
+
+.navbar-left{
+    color: #8c8c8c;
+    cursor: pointer;
+}
+
+.navbar-left:hover{
+    color: black;
+}
+
+.textcenter{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.textcenter p, a{
+    color: #8c8c8c;
+}
+
+.textcenter p{
+    padding-top: 10px;
+    padding-bottom: 14px;
+}
+
+.textcenter a{
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.textcenter a:hover {
+    color: black; 
+    padding-bottom: 2px;
+    border-bottom: 2px solid black;
+    transform: scale(1.08);
+    font-weight: 500;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.1); 
+    
+}  
+
+.textcenter p {
+    color: #8c8c8c;
+    padding-top: 10px;
+    padding-bottom: 14px;
+    display: inline-block; 
+    transition: all 0.3s ease; 
+}
+
+.textcenter p:hover {
+    color: black; 
+    transform: scale(1.07);
+    font-weight: 500; 
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.1); 
+}
+
+.right-top-left, 
+.right-top-right, 
+.right-bottom {
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
+    overflow: hidden;
+    position: relative;
+    z-index: 1; 
+}
+
+
+.right-top-left:hover, 
+.right-top-right:hover, 
+.right-bottom:hover {
+    transform: scale(1.1); 
+    z-index: 10; 
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); 
+}
+
+.right-top-left:hover::after, 
+.right-top-right:hover::after, 
+.right-bottom:hover::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        135deg, 
+        rgba(255, 255, 255, 0.1) 0%, 
+        rgba(255, 255, 255, 0) 60%
+    );
+    z-index: 2;
+}
